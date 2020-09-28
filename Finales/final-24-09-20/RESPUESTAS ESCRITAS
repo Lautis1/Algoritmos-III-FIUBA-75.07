@@ -1,0 +1,19 @@
+Observando el codigo dado, vemos los siguientes problemas:
+
+*En la clase Buscador vemos como se rompe el encapsulamiento, preguntando si el valor booleano "exacto" es verdadero o falso para ver como proseguir con el programa, lo que tambien viola el principio de Tell dont ask. Eso se peude modelar con una clase ExactitudBusqueda a la cual se le delegue el comportamiento del metodo buscarPorNommbre, buscarPorPrecio, buscarPorCategoria.
+
+*No me parece mal haber modelado los nombres, precios y categorias como strings para poder realizar una rapida comparacion, y tampoco me parece mal el uso de los ifs, ya que son necesarios (no son ifs de chequeo de tipo, solo para ver si los atributos son correctos, lo cual es un bad smell ya que accedes al estado del objeto Producto, pero no hay una forma mas sencilla de hacerlo)
+
+*Tiene una sola responsabilidad, que es la de buscar los productos por distintos atributos, lo cual parece correcto.
+
+*Se viola el principio de open closed ya que si se quisiera agregar un tipo de exactitud de busqueda distinto, habria que modificar toda la clase Buscador y todo el comportamiento de los mensajes de busqueda, cuando lo correcto seria realizarlo mediante extension del programa agregando clases.
+
+Todo esto que menciono yo lo modele teniendo distintas clases de buscador (una para cada atributo) y en la clase abstracta Buscador hice una especie de dispatch con cada atributo del producto, y se lanzan excepciones correspondientes cuando se quiere buscar, por ejemplo, por nombre en la clase que se encarga de buscar por categoria.
+
+*La clase producto es un simple contenedor de datos con gettes, lo cual generalmente es una mala practica, pero para este dominio es una solucion creo que aceptable, ya que necesitas saber los atributos de cada producto.
+
+*Se agrego la funcionalidad del tope maximo  de resultados
+
+*La clase de test BuscadorTest deberia estar en un paquete aparte del paquete de modelo.
+
+
