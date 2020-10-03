@@ -1,0 +1,46 @@
+CREACIONALES
+1)Singleton: garantiza q una clase solo tenga una instacia y proporciona un punto de acceso global a ella. La propia
+clase es responsable de crear su unica instancia, la cual se accede por metodo de clase. (patron facil pero intrusivo)
+
+2)Multiton: garantiza q una clase solo tenga varias instancias conocidas. Se implementa igual q singleton pero con
+un mapa en vez de con un atributo.
+
+3)Abastract factory: proporciona una interfaz para crear familias de objetos relacionados o que dependen entre si sin
+especificar la clase concreta. Se crea una clase factory abstracta q provea una interfaz comun de creacion de familias
+de objetos. Crear clases Fabricas q hereden de la clase abastracta y q implementen los metodos definidos creando
+instancias concretas.
+
+ORGANIZACION DEL TRABAJO
+4)Command: encapsula una peticion de un objeto, permitiendo parametrizar a los clientes con distintos peticiones.
+desacopla el codigo q solicita un servicio del q lo presta. Se crea clase abstracta/interfaz con un solo metodo: Ejecutar()
+cada clase dependiente implementara el metodo. Para invocarlo se instanciara a una de las clases y se invocara al metodo
+
+CONTROL DE ACCESO
+5)Proxy: proporciona un sustituto de otro objeto para controlar el acceso a este. Se crea una jerarquia en la que
+intervenga el objeto original y el proxy. El proxy tendra una referencia al obj original. Se redefinen todas las
+llamadas en el proxy incorporando codigo antes de pasarlas al obj original.
+
+6)Facade: proporciona una interfaz unificada para un conjunto de interfaces de un subsistema. Define una interfaz
+de alto nivel q hace q el subsisetma sea mas facil de usar. Minimiza la comunicacion y dependencias entre subsistemas.
+
+VARIACION DE SERVICIOS
+7)Strategy: un mismo objeto debe poder tener un comportamiento que debe ser determinado en tiempo de ejecucion. Se 
+delega el comportamiento en otro objeto. Se arma una jerarquia con los diferentes comportamientos y se inyecta
+el comportamiento al objeto a traves de un metodo o de su constructor.
+
+8)Template: definie en una operacion el esqueleto de un algoritmo, delegando en las subclases algunos de sus pasos.
+permite q las subclases redefinan ciertos pasos de un algoritmo sin cambiar su estructura. Implementar las partes
+de un algoritmo q no cambian y dejar q las subclases implementen el comportamiento. Tenica fundamental de 
+reutilizacionn de codigo.
+
+9)State: permite q un objeto modifique su comportamiento cada vez q cambie su estado interto, parecera q cambia
+la clase del objeto. El comport de un obj depende d su estado y debe cambiar en tiempo de ejecucion. Se usa cuando
+las operaciones tienen largas sentencias condicionales con multiples ramas q dependen del estado del objeto
+
+10)Decorator: asigna responsabilidades adicionales a un objeto dinamicamente, proporcionando una alternativa flexible
+a la herencia para extender funcionalidad. Se usa cuando hay responsabilidades q pueden ser retiradas, cuando la
+extension via herencia no es viable.
+
+11)Composite: compone objetos en estructuras de arbol para representar jerarquias de parte-todo. Permite q los clientes
+traten de manera uniforme a los objetos individuales y a los compuestos. Define jerarquias de clases formadas por
+objetos primitivos y compuestos, simplifica al cliente, facilita añadir nuevos componentes.

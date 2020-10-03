@@ -1,0 +1,26 @@
+La idea del patrón Singleton es proveer un mecanismo para limitar el número de instancias de una clase. Por lo tanto
+el mismo objeto es siempre compartido por distintas partes del código. Puede ser visto como una solución más elegante
+para una variable global porque los datos son abstraídos por detrás de la interfaz que publica la clase singleton.
+Dicho de otra manera, esta patrón busca garantizar que una clase sólo tenga una instancia y proporcionar un punto de
+acceso global a ella.
+
+Usaremos este patrón cuando:
+- Debe haber exactamente una instancia de una clase y deba ser accesible a los clientes desde un punto de acceso conocido.
+- Se requiere de un acceso estandarizado y conocido públicamente.
+
+Sus usos más comunes son clases que representan objetos unívocos. Por ejemplo, si hay un servidor que necesita ser
+representado mediante un objeto, este debería ser único, es decir, debería existir una sola instancia y el resto de
+las clases deberían de comunicarse con el mismo servidor. Un Calendario, por ejemplo, también es único para todos.
+No debe utilizarse cuando una clase esta representando a un objeto que no es único, por ejemplo, la clase Persona no
+debería ser Singleton, ya que representa a una persona real y cada persona tiene su propio nombre, edad, domicilio,
+DNI, etc.
+
+Ejemplo.
+
+Como dije anteriormente, este patrón es ideal para aquellas clases que representan objetos únicos. Por ejemplo,
+un instituto educativo es un objeto único. No deberíamos crear muchas instancias de esta clase ya que al hacer esto
+estaríamos diciendo que hay varios institutos educativos. Caso contrario serían los alumnos que asisten a dicho
+instituto. Debería haber un objeto por cada uno de los alumnos, ya que todos ellos tienen propiedades distintivas,
+desde el nombre hasta el documento de identidad. Pero todos los alumnos deberían comunicarse con el mismo instituto.
+
+Entonces, haremos que el instituto aplique el patrón Singleton:

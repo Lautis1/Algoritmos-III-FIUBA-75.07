@@ -1,0 +1,23 @@
+CONSIGNA 1:
+
+PROBLEMAS DE DISEÑO:
+
+1)Tratar por separado a las estufas,losas y cercos cuando se podria tener solo un array que incluya
+objetos del tipo ComponenteElectrico, y que por polimorfismo todos esos componentes se encarguen de
+responder al mensaje que calcula el gasto energetico.
+
+2)En ComponenteElectrico se  viola el principio de Tell don't ask, ya que se actúa segun el tipo de componente que sea.
+Otra cosa que veo es que se modelan los tipos de componente mediante string, cuando lo mejor seria tener los distintos 
+tipos de componente electrico modelados como clases distintas y que entiendan los mismos mensajes, y polimorficamente,
+respondan a ellos segun sus necesidades.
+Tambien se rompe el Open/Closed Principle ya que, al tener los componentes electricos modelados como un String, cada vez
+que se quiera extender el sistema agregando mas componentes electricos, hay que modificar ésta clase, cuando lo ideal
+seria que la clase esté cerrada para modificacion pero abierta para extension, creando nuevas clases para los nuevos
+componentes electricos y que hereden de la clase abstracta o interface ComponenteElectrico.
+Tambien, por el principio de sustitucion de liskov, sabemos que los opbjetos de un programa deberian ser reemplazables
+por instancias de las subclases sin que se altere el funcionamiento del programa (relacion "Es un/a"). Podemos ver
+que eso no se puede dar ya que estan modelando los componentes como strings.
+
+En la clase de Test, se setean los atributos de los componentes electricos, lo que rompe el encapsulameinto ya que
+nos indica que se estan mostrando las decisiones de diseño tomadas para modelar el componente electrico, y esos atributos
+deberian ser protegido/privados para que solo los componentes electricos sepan utilizarlos para responder algun mensaje.

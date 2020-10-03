@@ -1,0 +1,95 @@
+JAVA REFLECTION
+
+es una caracteristica del lenguaje de POO java. Permite a un programa java que se esta ejecutando
+examinar y manipular propiedades internas del programa. Por ejemplo, es posible, para una clase
+Java, obtener los nombres de todos sus miembros y mostrarlos.
+Esta habilidad de examinar y manipular una clase java no existe en otros lenguajes de programacion.
+Por ejemplo, no hay manera en PAscal, C o C++ de obtener informacion sobre las funciones
+definidas en un programa.
+EJEMPLO SIMPLE
+
+import java.lang.reflect.*;
+public class DumpMethods{
+	public static void main(String args[]){
+		try{
+			Class c = Class.forName(args[0]);
+			Method m[]= c.getDeclaredMethods();
+			for(int i=0; i<m.lenght;i++)
+				System.out.println(m[i].toString());
+			}
+		catch(Throwable e){
+			System.err.println(e);
+		}
+	}
+}
+
+El programa carga la clase especificada usando class.forName, entonces llama a
+getDeclaredMethods para recuperar la lista de metodos definidos en la clase.
+java.lang.reflect.Method es una clase que representa una unica clase method.
+
+PASOS PARA USAR REFLEXION
+hay 3 pasos para usar las clases que estan en reflect.
+primer paso: obtener un objeto java.lang.Class para la clase q quiero manipular.
+	java.lang.class es usada p representar clases e interfaces en un prgroama java
+	Una forma es:
+		Class c = Class.forName("java.lang.String") #para obtener el objeto Class de String
+		classC = int.class
+		o Class c = Integer.TYPE	
+segundo paso: llamar a un metodo como x ejemplo getDeclaredMethods para obtener una lista de todos
+	los metodos declarados por la clase.
+tercer paso: una vez con la info en mano, usar la API de reflexion para maniupular la info. por ejemplo:
+	Class c = Class.forName("java.lang.String");
+	Method m[] = c.getDeclaredMethods();
+	System.out.prinln(m[0].toString());
+	/esto muestra una representacion textual del primer metodo declado en String
+
+AVERIGUAR SOBRE METODOS DE UNA CLASS
+uno de los mas valiosos y basicos usos de reflexion es avergiuar que metodos estan definidos
+en una clase. El programa que se encarga de esto, primero toma la descripcion Class para method1 y luego
+llama a getDeclaredMethods para recuperar una lista de objetos Method, uno para cada metodo definido en la 
+clase. Incluye todos los metodos, sin importar la visibilidad. Si se usa getMethods en vez
+de getDeclaredMethods, se puede obtener info de metodos heredados.
+Una vez q se obtiene la lista de estos objetos, es simplemente cuestion de mostfar la informacion
+en tipos parametro, tipos exception y de tipos de return para cada metodo. Cada uno de estos tipos
+estan representados por un descriptor de Class.
+
+OBTENER INFORMACION SOBRE CONSTRUCTORES
+se hace de una forma similar. No hay informacion sobre tipos de return en el ejemplo, ya q los constructores
+no tienen un tipo real de retorno.
+		
+AVERIGUANDO SOBRE CAMPOS DE CLASS
+es posible encontrar cuales campos de datos estan definidos en una clase.
+Una nueva caracteristica es el uso de Modifier. Es una clase de reflection que representa los modificadores
+encontrados en un miembro de campo, por ejemplo "private int". Los modificadores son representados por un entero
+y Modifier.toString() es usado para devolver la representacion es string en el orden de declaracion oficial (como static antes de final)
+Tambien es posible obtener informacion sobre solamente los campos declarados en una clase (getDeclaredFields) u obtener info sobre campos
+definidos en superclases (getFields).
+
+INVOCANDO METODOS POR NOMBRE
+es posible usar reflection de otras maneras, como para invocar metodos de un nombre especifico.
+Suponer q un programa quiere invocar el metodo "add" pero no lo sabe hasta el tiempo de ejecucion.
+Esto es, el nombre del metodo es especificado durante el tiempo de ejecucion.
+getMethod es usado para encontar un metodo en la clase que tenga 2 parametros enteros y el nombre apropiado.
+una vez q este metodo obtuvo y capturo en el Method object, es invocado.
+para invocar al metodo, debe construirse una lista de parametros con los valores enteros 37 y 47 wrappeados como 
+objetos Integer.
+
+CREANDO NUEVOS OBJETOS
+no hay metodo de invocacion para constructores, porque invocar a un constructor es equivalente a crear un nuevo objeto
+El programa encuentra un constructor q maneja el parametro especificado y lo invoca para crear una nueva instancia
+del objeto.
+El valor de este enfoque es puramente diniamico, con una busqueda e invocacion de un constructor en tiempo de ejecucion.
+
+CAMBIANDO VALORES DE CAMPO
+otra forma de usar reflexion es para cambiar los valores de campos de datos en objetos. El valor de esto deriva de
+la naturaleza dinamica de reflexion, donde un campo puede ser buscado por nombre en un programa q se esta ejecutando
+y luego tener su valor modificado. 
+
+USANDO ARRAYS
+un uso final de reflexion es crear y manipular arreglos. Los arreglos en java son un tipo especifico de una clase, y una
+referencia a un array puede ser asignada a una referencia de Object.
+
+RESUMEN
+reflexion en java es muy utilizada porque soporta recuperacion dinamica de info sobre classes y estructuras de datos
+por nombre, y permite su manipulacion dentro de un programa java q se esta ejecutando. Esta caracteristica es extremadamente
+poderosa y no tiene equivalente en otros lenguajes de programacion.

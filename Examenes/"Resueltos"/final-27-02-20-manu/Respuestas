@@ -1,0 +1,11 @@
+1.  A la hora de querer agregar nuevos efectos especificos se tendrian que agregar mas clases que tienen
+el mismo comportamiento que otras ya existentes juntas.
+    Si la fabrica cambia su funcionamiento todas las llamadas a ella podrian dejar de funcionar.
+
+2.  Los efectos agegar cinco y ocho al final se pueden reducir a uno y agregar la cadena que se quiera (OCP).
+    Los efectos dar vuelta y primera mayus, y primera mayus y agregar 8 realizan 2 tareas. Se tienen que separar (SRP).
+    Las aplicaciones de efectos dependen de como funciona la Fabrica y no de una abstraccion. (DIP)
+
+CONSIDERACIONES:
+Los efectos pedidos tienen que estar explicitos mediante el llamado de una unica funcion. Aunque esto rompe
+el principio Open/Close, se entiende del enunciado que estas funciones especificas tienen que estar

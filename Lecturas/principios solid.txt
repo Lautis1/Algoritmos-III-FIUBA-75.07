@@ -1,0 +1,22 @@
+1) PRINCIPIO DE UNICA RESPONSABILIDAD:
+cada modulo o clase debe tener responsabilidad sobre una unica funcionalidad del software y debe estar encapsulada
+en su totalidad por la clase. Esto es necesario para tener una alta cohesion, ya que si una clase asume mas de una
+responsabilidad hay acoplamiento alto y seria mas sensible al cambio
+
+2)PRINCIPIO DE ABIERTO/CERRADO:
+una entidad debe estar abierta para su extension pero cerrada para su modificacion, es decir que no hay que modificar
+las clases existentes en el software, solo extender el software agregando mas clases.
+
+3)PRINCIPIO DE SUSTITUCION DE LISKOV:
+los objetos de un programa deberian ser reemplazables por instancias de sus subtipos sin alterar el correcto
+funcionamiento del programa (relacion "es un"). Las clases base no deben tener comportamiento que dependa de clases
+derivadas o de su existencia
+
+4)PRINCIPIO DE SEGREGACION DE LA INTERFAZ:
+los clientes de una clase no deben depender de metodos que no utilicen, solo deberian de tener los metodos q usan.
+si una clase tiene una referencia a, o hereda de, otra clase, de la cual solo se tiene sentido que utilice uno o pocos
+metodos, pero no todos, lo mejor seria dvidir esa clase en mas d una. Sirve para mantener el sistema desacoplado
+
+5)PRINCIPIO DE INVERSION DE IDENTIDAD:
+se debe programar contra abstracciones, no contra implementaciones. No conviene q una clase herede o tenga una asociacion
+hacia otra clase que tiene altas probabilidades de cambio. Las clases abstractas e interfaces son mas estables.

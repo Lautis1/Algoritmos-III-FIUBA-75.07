@@ -1,0 +1,33 @@
+1- a) Comentar Que cosas ve mal del codigo
+   b) Que principios viola ?
+
+2- Mejorar el codigo aplicando lo necesario , agregar un Caballo el cual va a 20km/h en asfalto (todos los tipos)
+   y en calles embarradas siempre a 20km/h
+	- Hacer un diagrama de clases de tu modelo
+	- Hacer un diagrama de secuencias de una persona en un 4x4 y conduce por calles embarradas
+
+3- Que es usabilidad? , nombres 3 principios de usabilidad que uso en el tp2
+4- Preguntas Teoricas a criterio del que corrige
+
+#####################################################################################3
+RESOLUCION
+
+1)Empezando por la clase Superficie, veo que esta modelada como un enumerador, cosa que no esta bien vista como buena practica
+de diseño. Para mejorar esto, propongo modelar la superficie como una Interfaz que esté implementada por las distintas superficies
+indicadas. Esto viola el principio de open/closed, ya q si quiero agregar una superficie nueva, tendria q modificar la clase ya existente,
+cuando lo correcto es agregar una nueva subclase q responda a esa interfaz.
+
+En la clase Persona, vemos que se viola el principio de unica responsabilidad:  la persona solo tendria que subirse a un vehiculo, pero
+no tiene que encargarse de devolver la velocidad del vehiculo segun la superficie por la que circula: eso es trabajo del propio vehiculo.
+Además, vemos q se hace abuso de condicionales IF de acuerdo a la superficie por la q circula el auto. Eso viola el Tell, don´t ask:
+actúa segun el estado de un objeto, cuando ese objeto deberia ser el que sepa como responder a ese mensaje de forma polimorfica, segun
+la clase en la q este instanciado.
+
+La clase Moto está de mas.
+La clase auto solo tiene un contenedor de datos.
+Esto deberia ser mejorado con una interfaz/clase abstracta vehiculo
+
+Como hay muchos tipos de vehiculos q pueden circular en distintos tipos de superficies, voy a utilizar el patron Double dispatch.
+
+Voy a hacer una distincion entre auto y camioneta 4x4. Lo ideal seria que el auto tenga un estado de traccion, q sea simple o doble traccion
+y segun la traccion que tenga en ese momento, calcular la velocidad segun superficie.

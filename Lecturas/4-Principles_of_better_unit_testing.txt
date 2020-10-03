@@ -1,0 +1,29 @@
+﻿https://esj.com/articles/2012/09/24/better-unit-testing.aspx
+
+8 Principles of Better Unit Testing
+
+
+Las pruebas unitarias son una pequeña, rápida y automatizada verificación de que una porción de código funciona.
+
+La prueba solo falla cuando hay una nueva falla en el sistema o hay un cambio de requerimiento.
+
+Caundo la prueba falla, es fácil entender la razón por la que falló.
+
+Para hacer buenas pruebas unitarias, se debe cumplir:
+1) saber lo que se está probando: hacer test realmente unitarios: que verifiquen una sola funcionalidad;
+
+2) las pruebas unitarias deben ser autosuficientes: deben ser independientes del ambiente, de regístros, de base de datos,
+ etc.. 
+
+3) las pruebas deben ser determinísticas: sólo debe fallar si efectivamente hay un error en el código.
+
+4) debe haber convenciones de nombres: en un prueba con un nombre adecuado, es mucho más fácil saber que falló y porque.
+
+5) permitirse repetir código dentro de las pruebas.
+
+6) probar los resultados, no la implementación.
+
+7) Evitar la sobreespecificación: esto hace que la prueba se más "frágil", y su mantenimiento ante cualquier cambio es
+ mucho más costoso.
+
+8) Usar un marco de pruebas aislado: para no depender de los componentes externos que se requieren probar.

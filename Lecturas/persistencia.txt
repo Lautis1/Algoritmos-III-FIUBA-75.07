@@ -1,0 +1,30 @@
+Caracteristica que puede tener un dato o estado que le permite sobrevivir al proceso que l creó.
+un ambiente POO debepermitir que los objetos persistan para mantener su vida mas alla de la vida del sistema.
+-un objeto persistente es aquel que conserva su estado en un medio de almacenamiento permanente, pudiendo
+ser reconstruido por el mismo proceso que lo genero u otro, de modo tal que al reconstruirlo se encuentre en el mismo
+estado en que se lo guardo. Al objeto no persistente se lo llama Transitorio.
+
+-persistencia es trascender en el tiempo y/o espacio. En informatica hace referencia a la caracteristica q puede tener
+un dato o estado q le permite sobrevivir al proceso q lo creo.
+
+Persistencia nativa: la da la plataforma (se usa en java y smalltalk). Resuelve referencias circulares
+Persistencia no nativa: programada a mano o provista por librerias externas. Cada clase conoce como serializarse; queda
+en manos del programador las cuestiones de diseño (respondabilidad, formato, identidad de los objetos). mas versatil
+pero mas compleja
+
+Los lenguajes POO soportan una variante que exige guardar y recuperar objetos en forma activa. Una excepcion es
+smalltalk y su PERSISTENCIA BASADA EN IMAGENES
+
+Para persistir, primero debo serializar, pero serializar no implica necesariamnte persistir.
+
+SERIALIZACION: convertir la representacion de un objeto en una secuencia de bytes.
+Java posee serializacion automatica (hay que implementar la interfaz Serializable sin metodos, con sus sublcases
+todas serializables, serializa a los objetos referenciados
+
+PERSISTENCIA EN JAVA: 
+-Resuelve referenias circulares (ventaja)
+-No es portable facilmente a otros lenguajes
+-Overhead alto
+-El archivo es binario
+-No es extensible ni reparable
+

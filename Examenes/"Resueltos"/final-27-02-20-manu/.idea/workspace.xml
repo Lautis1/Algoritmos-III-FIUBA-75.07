@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="51e4a7f9-93ed-40de-991e-821d8a48003c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YPHrVyfm7iJIfYB8VwKzVJQpC5" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../final-27-02-original" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="All in final-27-02-alumno" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="final-27-02-alumno" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in final-27-02-alumno" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51e4a7f9-93ed-40de-991e-821d8a48003c" name="Default Changelist" comment="" />
+      <created>1582837507468</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582837507468</updated>
+      <workItem from="1582837508909" duration="6809000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="266" y="30" width="895" height="738" key="#All_in_final-27-02-alumno" timestamp="1582837657013">
+      <screen x="71" y="30" width="1295" height="738" />
+    </state>
+    <state x="266" y="30" width="895" height="738" key="#All_in_final-27-02-alumno/71.30.1295.738@71.30.1295.738" timestamp="1582837657013" />
+    <state x="294" y="60" key="#Project_Structure" timestamp="1582837646512">
+      <screen x="71" y="30" width="1295" height="738" />
+    </state>
+    <state x="294" y="60" key="#Project_Structure/71.30.1295.738@71.30.1295.738" timestamp="1582837646512" />
+    <state x="473" y="251" width="491" height="311" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1582837632788">
+      <screen x="71" y="30" width="1295" height="738" />
+    </state>
+    <state x="473" y="251" width="491" height="311" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/71.30.1295.738@71.30.1295.738" timestamp="1582837632788" />
+    <state x="501" y="157" width="424" height="488" key="FileChooserDialogImpl" timestamp="1582845915232">
+      <screen x="71" y="30" width="1295" height="738" />
+    </state>
+    <state x="501" y="157" width="424" height="488" key="FileChooserDialogImpl/71.30.1295.738@71.30.1295.738" timestamp="1582845915232" />
+    <state width="1245" height="76" key="GridCell.Tab.0.bottom" timestamp="1583105351404">
+      <screen x="71" y="30" width="1295" height="738" />
+    </state>
+    <state width="1245" height="76" key="GridCell.Tab.0.bottom/71.30.1295.738@71.30.1295.738" timestamp="1583105351404" />
+    <state width="1245" height="76" key="GridCell.Tab.0.center" timestamp="1583105351403">
+      <screen x="71" y="30" width="1295" height="738" />
+    </state>
+    <state width="1245" height="76" key="GridCell.Tab.0.center/71.30.1295.738@71.30.1295.738" timestamp="1583105351403" />
+    <state width="1245" height="76" key="GridCell.Tab.0.left" timestamp="1583105351401">
+      <screen x="71" y="30" width="1295" height="738" />
+    </state>
+    <state width="1245" height="76" key="GridCell.Tab.0.left/71.30.1295.738@71.30.1295.738" timestamp="1583105351401" />
+    <state width="1245" height="76" key="GridCell.Tab.0.right" timestamp="1583105351404">
+      <screen x="71" y="30" width="1295" height="738" />
+    </state>
+    <state width="1245" height="76" key="GridCell.Tab.0.right/71.30.1295.738@71.30.1295.738" timestamp="1583105351403" />
+    <state x="201" y="30" width="1024" height="738" key="SettingsEditor" timestamp="1582837536810">
+      <screen x="71" y="30" width="1295" height="738" />
+    </state>
+    <state x="201" y="30" width="1024" height="738" key="SettingsEditor/71.30.1295.738@71.30.1295.738" timestamp="1582837536810" />
+    <state x="405" y="291" width="617" height="219" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1582837650584">
+      <screen x="71" y="30" width="1295" height="738" />
+    </state>
+    <state x="405" y="291" width="617" height="219" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/71.30.1295.738@71.30.1295.738" timestamp="1582837650584" />
+  </component>
+</project>

@@ -1,0 +1,72 @@
+/********************************************************************************************************************************************
+ * ANTES DE EMPEZAR 
+*********************************************************************************************************************************************/
+ 
+a.Crear un proyecto nuevo desde su IDE llamandolo final-aves-original. Una vez creado copiar todas las carpetas con clases de este zip.
+b.Crear un proyecto nuevo desde su IDE llamandolo final-aves-alumno. Una vez creado copiar todas las carpetas con clases de este zip.
+c.Trabajar SIEMPRE sobre el proyecto final-aves-alumno
+
+
+/********************************************************************************************************************************************
+* IMPORTANTE
+*********************************************************************************************************************************************/
+
+Para aprobar este examen el/la alumno/a debe entregar una solución integral y completa que resuelva el problema dado, demostrando un alto dominio de POO, así como también de UML.
+En este sentido cualquiera de las siguientes situaciones conlleva a la desaprobación AUTOMATICA del examen integrador:
+
+	1. NO entregar código desarrollado por el propio/a alumno/a.
+	2. NO entregar diagramas UML.
+	3. Presentar errores GROSEROS de notación UML.
+
+
+/********************************************************************************************************************************************
+ * PREGUNTAS 
+*********************************************************************************************************************************************/
+
+1) Analice el modelo otorgado y conteste:
+
+	a) ¿Qué potenciales problemas de diseño encuentra en el código? Enumérelos explicando PARA CADA UNO de ellos porqué considera que representan un problema de diseño.
+	b) ¿Se viola algún(os) principio(s) de diseño ? ¿Cual(es)? 
+
+
+2) 	En base a los items que ud. detalle en el punto (1) desarrolle diseñando y programando una mejora de diseño total del proyecto para incluir:
+
+	 Pingüino el cual solo sabe:
+		i. nadar sobre el agua (devuelve un entero de valor 20 para el agua)
+		ii. correr sobre el hielo a una velocidad de 5 km/h.
+
+		a) Realice PRIMERO un diagrama de clases A MANO ALZADA de como sera su nuevo diseño.
+		b) Realice un diagrama de secuencia A MANO ALZADA del avestruz corriendo sobre el Barro.
+
+
+3) Preguntas teóricas: A determinar por el docente.
+
+
+4) Lecturas obligatorias: A determinar por el docente.
+
+
+RESOLUCION
+
+1)PROBLEMAS QUE ENCONTRE Y POSIBLES PRINCIPIOS VIOLADOS:
+-En la clase AbelPintos se deja de lado el polimorfismo para utilizar condicionales if's preguntando
+por el tipo de superficie por la que corre. Esta actitud viola lo llamado "tell don�t ask" que dice que 
+a un objeto se le tiene que decir que haga algo SIN CONSULTAR SU ESTADO: aca se le esta preguntando a 
+la superficie que tipo de superficie es para saber a que velocidad se movera abel.
+Lo mismo sucede en la clase avestruz.
+-A la interfaz estado le faltaria hacer uso de un patron del tipo dispatch para no tener que andar pregutando
+que tipo de superficie recibe un corredor, sino que sepa actuar para cada superficie.
+-Se viola en casi todo el programa l principio de inversion de la dependencia,que dice que se debe programar
+contra abstracciones y no contra implementaciones: por ejemplo las clases estan heredando de la interfaz
+estado, que tiene alta probabilidad de cambio.
+-En la clase gorrion se devuelven valores magicos que indicarian qu� canta el pajaro y cual es su velocidad
+a la hora de volar: podrian ser constantes static privadas ya que no se modifican.
+-la clase Superficie utiliza un enumerador con valores hardcodeados. Lo mejor seria tener una interfaz o 
+clase abstracta Superficie de donde hereden las subclases Hielo, Barro, Pista y que cada una sepa manejar
+el comportamiento cuando un corredor quiere correr en esa superficie, y que el corredor no ande preguntando
+sobre qu� superficie va a correr para asi saber a la velocidad q va a ir.
+-Se viola el prinipio de sustitucion de liskov ya que, por ejemplo, no se puede reemplazar a Estado por
+avestruz si se quiere instanciar a un corredor. Tendria que haber una interfaz Corredor que este implementada
+por todos los sujetos que pueden correr (por ejemplo: abelpintos y avestruz).
+-Se viola el principio de abierto/cerrado ya que si quiero agregar una clase extra, debo modificar clases
+existentes. En mi modelo, si quiero agregar un pinguino, creo una clase Pinguino que implemente las interfaces
+Corredor y Nadador, y no tengo que modificar mas nada.

@@ -1,0 +1,29 @@
+1- a) Comentar Que cosas ve mal del codigo
+   b) Que principios viola ?
+
+
+2- Mejorar el codigo aplicando lo necesario,
+agregar un Caballo el cual va a 20km/h en asfalto (todos los tipos)
+   y en calles embarradas siempre a 20km/h
+	- 
+Hacer un diagrama de clases de tu modelo
+	- 
+Hacer un diagrama de secuencias de una persona en un 4x4 y conduce por calles embarradas
+
+
+3- Que es usabilidad? , nombres 3 principios de usabilidad que uso en el tp2
+
+4- Preguntas Teoricas a criterio del que corrige
+
+1- A) En la clase Persona se hace abuso de condicionales, lo que deja en claro que no se uso Polimorfismo (y viola
+el principio de inversion de la dependencia).
+Tambien un error que veo es que la persona tiene un metodo distinto para subirseA un auto o una moto:
+yo implementaria una interfaz llamada Vehiculo que incluya a auto y moto, y no tener q hacer
+distincion de que vehiculo se usa. Asi podria usar herencia. (Luego se agregaria el CAballo).
+En la clase Auto se usaba un atributo del tipo booleano para distinguir si era auto 4x4 o tradicional.
+Mi solucion fue crear una clase Auto4x4 que implemente a la interfaz Vehiculo (hubiese sido mejor que la clase
+Auto fuese abstracta y que sus subclases sean AutoTradicional y Auto4x4 pero sinceramente se me ocurrio depsues de haber 
+terminado el diseño).
+Teniendo todo el diseño terminado, agregar un Caballo con velocidad constante de 20km solo implica tener que crear
+la clase Caballo, que implemente a la interfaz Vehiculo, y que su velocidad devuelta sea 20km/h en todo caso.
+Esto responde al principio de Abierto/Cerrado ya que solo extendi la interfaz, no la modifique.

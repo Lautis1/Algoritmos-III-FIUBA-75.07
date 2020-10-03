@@ -1,0 +1,17 @@
+Concurrencia es "tratar de lidiar con muchas cosas a la vez" para mejorar performance, tiempo de respuesta
+al usuario, aprovechamiento de hardware, etc.
+Es tratar de descomponer tareas en tareas mas chicas tal que su ejecucion pueda solaparse.
+
+Paralelismo es ejecutar tareas en simultaneo, por lo que concurrencia NO IMPLICA paralelismo.
+THREAD: secuencia independiente de instrucciones ejecutandose dentro de un programa; funcion que
+se ejecuta de manera concurrente.
+
+Problemas:
+- "Race condition": se da cuando varios threads pueden acceder a recursos compartidos
+- "Critical section": seccion de codigo que necesita ser ejecutada en forma atomica por un solo hilo a la vez.
+- "Deadlock": cuando entre 2 o mas threas, uno obtiene un recurso y no lo libera, generando un bloqueo.
+
+Solucion:
+"Locks": uso de una variable de exclusion mutua
+"Monitores": objetos thread-safe, sus metodos estan sincronizados
+"Conditional variable": mecanismo de bloqueo con una señalizacion.

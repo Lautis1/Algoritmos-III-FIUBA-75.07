@@ -1,0 +1,45 @@
+﻿Integración continua
+
+Es una práctica de desarrollo de software dónde los desarrolladores integran periódicamente su trabajo (al menos, diariamente) al conjunto,
+contando con verificación de errores automática, lo cual agaliza y facilita el desarrollo cohesivo, detectando los errores lo antes posible. 
+
+Se busca que la integración del software no sea un evento, sino que se algo corriente. Luego de las pruebas automatizadas de cada desarrollador
+se ejecuta una prueba integral de lo que ya está construido. En caso de que se produzca un error en cualquiera de las fases, el mismo se detecta rápidamente,
+y en el marco de la integración, se debe solucionar lo más pronto posible evitando mantener en el tiempo un build fallido.
+
+Prácticas:
+-> Mantener un sólo repositorio fuente. El mismo debe estar administrado bajo un sistema adecuado (como Subversion), y debe ser de fácil acceso para todos.
+El repositorio debe contener todos los archivos necesarios para el trabajo de los desarrolladores. Minimizar el uso de ramas.
+
+-> Automatizar el build. Asegurarse que se puede compilar y ejecutar todo el sistema con solo un comando o solo un click.
+
+-> Hacer que el build se auto pruebe. (de forma automática). A su vez debe indicar si alguna prueba falló, y en dicho caso, debe fallar el build.
+
+-> Hacer que todos realicen un commit diario al mainline: los commits continuon agilizan el proceso de detección y corrección de errores de integración.
+Los errores ocurren entre un commit y otro, por lo que disminuyen las posibilidades de los factores que generan el error.
+
+-> El mainline se construye con cada commit en una computadora específica para la integración: hacer todos los builds sobre un mismo mabiente ahorro los
+problemas de diferencias entre las computadoras de los dessarrolladores.
+
+-> Arreglar los builds rotos inmediatamente: el primer paso es revertir el commit (NO hacer debugging sobre el mainline roto, el mismo debe hacerse sobre 
+un ambiente local). 
+
+-> Mantener el build rápido: al rededor de 10 minutos es el tiempo esperado para la compilación de todo el sistema. En general lo que más tiempo 
+toma son las pruebas.
+
+-> Probar en un ambiente que sea un clon del ambiente productivo: cada diferencia con el mismo representa un riesgo, y resta representatividad a la prueba.
+Recordar usar el mismo software y los mismas versiones en el ambiente de pruebas (e idealmente, usar las mismas direcciones ip, los mismos puertos y el mismo hardware).
+En todo caso, se deben comprender los riesgos de las diferencias con producción.
+
+-> Obtener el último ejecutable del sistema debe ser sencillo para todos.
+
+-> Todos deben poder ver el estado actual del proyecto. (y visualizar los cambios del mismo).
+
+-> Despliegue automático: se debe poder desplegar la aplicación en cualquier ambiente de forma automatizada (incluso producción). La vuelta atrás es un
+escenario que también debe automatizarse.
+
+Beneficios:
+-> Reduce los riesgos en el desarrollo y el despliegue de software.
+-> Facilita la detección y eliminación de bugs.
+-> Aumenta la velocidad de los despliegues, facilitando la interacción entre desarrolladores y usuarios.
+

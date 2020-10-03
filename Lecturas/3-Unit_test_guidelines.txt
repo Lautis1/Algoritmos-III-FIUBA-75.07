@@ -1,0 +1,31 @@
+http://geosoft.no/development/unittesting.html
+
+:
+
+1. Las pruebas unitarias deben ser pequeñas y rápidas;
+2. Las pruebas unitarias deben estar automatizadas completamente, y no deben ser interactivas;
+3. Las pruebas unitarias deben ser simples de ejecutar;
+4. Las pruebas unitarias deben ser medidas y analizadas.
+5. Las pruebas unitarias deben ser reparadas inmediatamente en caso de fallar.
+6. Deben haber una clase de test por cada clase, y su comportamiento correspondiente debe testearse de forma aislada.
+7. Empezar haciendo pruebas simples.
+8. Mantener las pruebas independientes unas de otras.
+9. Mantener las clases de prueba cerca de las clases probadas.
+10. Elegir nombre adecuados para las clases de prueba.
+11. Testear el contenido público de una clase (para facilitar el mantenimiento).
+12. Usar la técnica de la caja negra (no visualizar el código que se está probando).
+13. Usar la técnica de la caja blanca (analizar el código durante la prueba).
+14. Probar los casos triviales.
+15. Concentrarse primero en probar que el método ejecute.
+16. Probar casos borde.
+17. Utilizar un generador aleatorio.
+18. Testear cada característica del programa una vez (facilita el mantenimiento).
+19. Usar asserts explícitos (para entender más fácilmente que falló en el peor de los casos).
+20. Hacer testing "negativo" (probar entradas invalidas).
+21. Diseñar el código con las pruebas en mente.
+22. Hacer las pruebas unitarias sin conocimiento explícito del ambiente en el que se ejecutan.
+23. Conocer el costo de las pruebas.
+24. Priorizar las pruebas.
+25. Preparar el código de las pruebas para las fallas.
+26. Escribir las pruebas para reproducir bugs.
+27. Conocer las limitaciones de las pruebas: nunca podrán asegurar que el código está perfecto.

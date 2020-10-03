@@ -1,0 +1,25 @@
+PROBLEMAS DE DISEÑO OBSERVADOS
+
+1)No se deberia poder setear la vida de un objeto desde fuera de el ya que eso estaria violando el encapsulamiento,
+y accediendo a atributos privados de un objeto.
+2)El KaiohKen deberia estar modelado como un patron state, y que cada objeto que implementa la interface Kaiohken se encargue
+de responder los mensajes polimorficamente, y dejar de lado el uso de IFs ya que esto viola el Principio de Tell Don't Ask, 
+ya que se actúa en funcion del tipo de kaiohken que sea, cuando se deberia enviar el mensaje a su tipo y que polimorficamente
+lo responda.
+3) Los tipos de ataques deberian estar modelados como entidades aparte y no como strings, ya que esto deriva en tener que
+usar IFs para actuar segun el tipo de ataque. Viola el encapsulamiento, el principio de tell dont ask, y el principio solid
+Open/closed, que dice que un sistema debe estar abierto para extension pero no para modificacion.
+4) Modelar a KaiohKen como un enum es un bad smell. Deberia estar modelado como entidades extra. En mi caso, sera una interfaz
+que se pueda utilizar como estado en Goku.
+
+5)En Vegeta, no es una buena practica mostrar por consola cuando vegeta esta muerto, o el enemigo esta muerto. Esto se deberia
+modelar como Excepciones que sean lanzadas en tiempo de ejecución del mensaje.
+
+6)Viendo la clase de test, observo que no son unitarios, ya que se estan probando distintas formas de ataque y con distintos
+kaiohkens. Deberia haber pruebas unitarias, y algunas de integracion, pero unitarias fundamentalmente.
+Además, el nombre no tiene la suficiente informacion como para saber que hace el test.
+
+7) Voy a moderlar una interfaz que este implementada por goku y vegeta, y que cada una de esas 2 clases implemente el
+mensaje atacar(Atacable atacable, Ataque ataque), ya que tengo que programar contra abstracciones y no contra implementaciones
+(princpio de inversion de la dependencia)
+
